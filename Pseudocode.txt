@@ -1,0 +1,11 @@
+1. Create a game board (7 columns x 6 rows).
+2. Initialize the board with empty slots.
+3. Display the initial game board.
+4. Loop until a player wins or the board is full:
+    a. Ask the current player for their move (column number).
+    b. Check if the selected column is valid (not full).
+    c. Update the board with the player's piece in the chosen column.
+    d. Check for a win condition horizontally, vertically, or diagonally.
+    e. If a win condition is met, end the game and declare the winner.
+    f. Switch to the next player.
+5. If the board is full and no one wins, declare a draw.
