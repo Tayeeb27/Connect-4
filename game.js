@@ -1,18 +1,19 @@
 const readline = require('readline');
+const c = require('ansi-colors')
 
 const rows = 6;
 const columns = 7;
 const players = ['Player 1', 'Player 2'];
 let currentPlayer = 0;
 
-// Create an empty game board
+// Creates an empty game board
 const board = Array.from({ length: rows }, () => Array(columns).fill(' '));
 
 // Function to display the game board
 const displayBoard = () => {
   console.clear();
   for (let row of board) {
-    console.log(`|${row.join('|')}|`);
+    console.log(c.blue(`|${row.join('|')}|`));
   }
   console.log(' 1 2 3 4 5 6 7');
 }
@@ -26,7 +27,7 @@ const isColumnFull = (col) => {
 const placePiece = (col) => {
   for (let row = rows - 1; row >= 0; row--) {
     if (board[row][col] === ' ') {
-      board[row][col] = currentPlayer === 0 ? 'X' : 'O';
+      board[row][col] = currentPlayer === 0 ? c.red('X') : c.yellow('O');
       return row;
     }
   }
@@ -36,7 +37,7 @@ const placePiece = (col) => {
 // Function to check for a win
 const checkForWin = (row, col) => {
     const directions = [
-      [1, 0], [0, 1], [1, 1], [-1, 1] // Vertical, Horizontal, Diagonal Up, Diagonal Down
+      [1, 0], [0, 1], [1, 1], [-1, 1] // Checks for Vertical, Horizontal, Diagonal Up, Diagonal Down
     ];
   
     for (let dir of directions) {
