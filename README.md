@@ -16,8 +16,17 @@ To play
 
 Controls
 
-    Player 1: Enter the column number to drop your piece.
-    Player 2: Press Enter to drop your piece.
+    Choose 1: To play vs another player
+    Step 1: Enter the column number to drop your piece.
+    Step 2: Press Enter to drop your piece.
+    Same for player 2
+    or
+    Choose 2: To play vs the computer
+    Step 1: Enter the column number to drop your piece.
+    Step 2: Press Enter to drop your piece.
+    Wait for the computer to make its move
+
+    Once you have 4 in a row the game will announce that you have won   
 
 Author
 
